@@ -1,10 +1,87 @@
-@import '../lib/reset';
+@red:     #f00;
+@lred:    #f08b8e;
+@orange:  #f5a36c;
+@yellow:  #fad67b;
+@lgreen:  #a9d5a9;
+@green:   #40c15d;
+@teal:    #81d5d5;
+@blue:    #81a9d5;
+@lblue:   #acd5d5;
+@pink:    #d6aad6;
 
 html { width: 100%; height: 100%; }
+
 body {
   position: relative;
-  font: 103px/normal 'Ubuntu Mono', monospace, sans-serif;
-  color: #000;
-  background: #fff;
-  overflow-y: scroll;
+  font-size: 12px;
+  line-height: 1;
+  font-family: 'Ubuntu Mono', monospace, sans-serif;
+  font-family: 'Helvetica Neue';
+  color: #fff;
+  background: #000;
+  padding: 10px;
+  margin: 0;
+  border: 0;
 }
+
+a {
+  color: #666;
+  text-decoration: none;
+  &:hover {
+    color: #fff;
+  }
+}
+
+
+.message {
+  position: relative;
+  padding: 20px 0;
+  padding-right: 25px;
+  border-bottom: 1px dotted #333;
+
+  .info {
+    margin-bottom: 10px;
+  }  
+
+  .block(){
+    padding: 2px 3px;
+    border-radius: 2px;
+  }
+
+  span {
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .project-name { }
+  .user-name { color: #666; }
+  .date { color: #666; }
+  .type {
+    &.commit        { color: @blue;  } 
+    &.pull-request  { color: @lgreen; }
+    &.issue         { color: @yellow; }
+    &.success { 
+      color: @green;  
+      font-weight: bold;
+    }
+    &.fail { 
+      .block();
+      background: @red;    
+      color: #000;
+      font-weight: bold;
+    }
+  }
+
+
+  .body {
+    font-weight: bold;
+    margin-bottom: 10px;    
+  }
+  
+  .links {
+    font-size: 10px;
+  }
+}
+
+
+
