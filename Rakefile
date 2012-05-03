@@ -1,12 +1,7 @@
-require 'bundler'
-Bundler.require
-
-require 'sinatra/activerecord/rake'
-require 'coyote/rake'
-
 $: << File.expand_path(File.dirname(__FILE__) + "/lib")
 require 'nerdfeed'
-
+require 'sinatra/activerecord/rake'
+require 'coyote/rake'
 
 root = "lib/nerdfeed"
 
@@ -14,7 +9,6 @@ task :default => [:build]
 task :build   => ['assets:build']
 
 namespace :assets do
-  Bundler.require(:assets)
   task :build => ['css:build','js:build']
 end
 
