@@ -1,7 +1,9 @@
+require 'bundler'
+Bundler.require(:default)
+
 $: << File.expand_path(File.dirname(__FILE__) + "/lib")
 require 'nerdfeed'
 require 'sinatra/activerecord/rake'
-require 'coyote/rake'
 
 root = "lib/nerdfeed"
 
@@ -13,6 +15,7 @@ namespace :assets do
 end
 
 namespace :css do
+  Bundler.require(:assets)
   coyote :build do |config|
     config.input    = "#{root}/assets/stylesheets/app/application.less"
     config.output   = "#{root}/public/css/application.css"
@@ -26,6 +29,7 @@ namespace :css do
 end
 
 namespace :js do
+  Bundler.require(:assets)
   coyote :build do |config|
     config.input    = "#{root}/assets/javascripts/app/application.coffee"
     config.output   = "#{root}/public/scripts/application.js"

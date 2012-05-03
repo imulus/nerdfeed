@@ -1,5 +1,6 @@
 require 'bundler'
-Bundler.require
+Bundler.require(:default)
+
 require 'nerdfeed/app'
 
 module NerdFeed
