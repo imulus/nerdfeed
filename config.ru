@@ -1,6 +1,6 @@
-require 'bundler'
-Bundler.require
-require './app'
+$: << File.expand_path(File.dirname(__FILE__) + "/lib")
+require 'nerdfeed'
 
-run App
-
+map '/' do
+  run NerdFeed::App
+end

@@ -1,0 +1,16 @@
+html{width:100%;height:100%;}
+body{position:relative;font-size:12px;line-height:1;font-family:'Ubuntu Mono',monospace,sans-serif;font-family:'Helvetica Neue';color:#fff;background:#000;padding:10px;margin:0;border:0;}
+a{color:#666;text-decoration:none;}a:hover{color:#fff;}
+.message{position:relative;padding:20px 0;padding-right:25px;border-bottom:1px dotted #333;}.message .info{margin-bottom:10px;}
+.message span{display:inline-block;margin-right:5px;}
+.message .user-name{color:#666;}
+.message .date{color:#666;}
+.message .kind.commit{color:#81a9d5;}
+.message .kind.pull-request{color:#a9d5a9;}
+.message .kind.issue{color:#fad67b;}
+.message .kind.success{color:#40c15d;font-weight:bold;}
+.message .kind.fail{padding:2px 3px;border-radius:2px;background:#ff0000;color:#000;font-weight:bold;}
+.message .body{font-weight:bold;margin-bottom:10px;}
+.message .links{font-size:10px;}
+ 
+
